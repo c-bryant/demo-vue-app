@@ -100,6 +100,11 @@ onBeforeUnmount(() => {
   font-size: 64px;
 }
 
+/* When .spinning is present, run exactly one rotation so animationend fires */
+.crest-image.spinning {
+  animation: spin-once 8s linear 1;
+}
+
 @keyframes spin-once {
   from {
     transform: rotate(0deg);
@@ -107,10 +112,5 @@ onBeforeUnmount(() => {
   to {
     transform: rotate(360deg);
   }
-}
-
-/* When .spinning is present, run exactly one rotation so animationend fires */
-.crest-image.spinning {
-  animation: spin-once 8s linear 1;
 }
 </style>

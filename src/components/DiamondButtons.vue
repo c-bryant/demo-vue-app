@@ -53,7 +53,6 @@ const toggleRainbowColors = () => {
     box-shadow 0.15s ease,
     transform 0 box-shadow 0.15s ease,
     transform 0.15s ease;
-  cursor: pointer;
 }
 
 .btn:active {

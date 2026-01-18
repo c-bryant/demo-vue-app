@@ -21,11 +21,9 @@ const toggleRainbowColors = () => {
 
 <template>
   <div class="btn-group">
-    <button class="btn" @click="toggleText" :class="{ 'rainbow-colors': isRainbow }">
-      <span class="btn-text">A</span>
-    </button>
+    <button class="btn" @click="toggleText" :class="{ 'rainbow-colors': isRainbow }">A</button>
     <button class="btn" @click="toggleRainbowColors" :class="{ 'rainbow-colors': isRainbow }">
-      <span class="btn-text">B</span>
+      B
     </button>
   </div>
 </template>
@@ -37,6 +35,7 @@ const toggleRainbowColors = () => {
   width: 100px;
   height: 200px;
 }
+
 .btn {
   display: flex;
   align-items: center;
@@ -73,10 +72,6 @@ const toggleRainbowColors = () => {
 
 .btn:nth-child(2):active {
   box-shadow: inset 0 4px 8px #0006;
-}
-
-.btn-text {
-  position: relative;
 }
 
 @keyframes rainbow {

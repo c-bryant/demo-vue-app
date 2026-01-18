@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="box">
+  <section class="box">
     <slot></slot>
-  </div>
+  </section>
 </template>
 
 <style scoped>

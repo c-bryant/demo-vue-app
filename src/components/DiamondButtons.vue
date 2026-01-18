@@ -1,12 +1,22 @@
 <script setup>
+import { ref } from 'vue'
+
 const props = defineProps({
-  isRainbow: { type: Boolean, default: false },
+  text: { type: String, default: '' },
 })
 
-const emit = defineEmits(['textToggle', 'rainbowToggle'])
+const emit = defineEmits(['update:text'])
 
-const toggleText = () => emit('textToggle')
-const toggleRainbowColors = () => emit('rainbowToggle')
+const isRainbow = ref(false)
+
+const toggleText = () => {
+  const newText = props.text === 'Sigma' ? 'Alpha' : 'Sigma'
+  emit('update:text', newText)
+}
+
+const toggleRainbowColors = () => {
+  isRainbow.value = !isRainbow.value
+}
 </script>
 
 <template>

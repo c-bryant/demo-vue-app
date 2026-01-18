@@ -3,15 +3,9 @@ import Box from './components/Box.vue'
 import DiamondButtons from './components/DiamondButtons.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const text = ref('Sigma')
-
-const isRainbow = ref(false)
-
 const fontLoaded = ref(false)
 
-const onToggleClick = () => {
-  text.value = text.value === 'Sigma' ? 'Alpha' : 'Sigma'
-}
+const text = ref('Sigma')
 
 const isSpinning = ref(true)
 let spinPauseTimer = null
@@ -71,13 +65,7 @@ onBeforeUnmount(() => {
 
     <!-- Bottom-right quadrant -->
     <Box class="quadrant br">
-      <div class="box-content">
-        <DiamondButtons
-          :isRainbow="isRainbow"
-          @textToggle="onToggleClick"
-          @rainbowToggle="isRainbow = !isRainbow"
-        />
-      </div>
+      <DiamondButtons v-model:text="text" />
     </Box>
   </div>
 </template>

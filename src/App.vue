@@ -9,13 +9,6 @@ const isRainbow = ref(false)
 
 const fontLoaded = ref(false)
 
-const onSigmaClick = () => {
-  text.value = 'Sigma'
-}
-const onAlphaClick = () => {
-  text.value = 'Alpha'
-}
-
 const onToggleClick = () => {
   text.value = text.value === 'Sigma' ? 'Alpha' : 'Sigma'
 }

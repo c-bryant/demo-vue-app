@@ -113,10 +113,10 @@ onBeforeUnmount(() => {
 }
 
 .stylized-text {
-  font-weight: bold;
+  font-weight: 400;
   color: rgb(31, 29, 29);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-family: Exile, system-ui;
+  font-size: 64px;
 }
 
 @keyframes spin-once {

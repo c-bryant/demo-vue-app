@@ -2,9 +2,7 @@
 
 <template>
   <div class="box">
-    <div class="box-content">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -18,10 +16,11 @@
   height: 100%;
   box-sizing: border-box;
   padding: 8px;
-  background-color: lightgray;
+  background-color: #dcdcdc;
 }
 
-.box-content {
+/* Make slotted content fill and scale inside the box. */
+::v-deep .box {
   width: 100%;
   height: 100%;
   display: flex;
@@ -29,16 +28,7 @@
   justify-content: center;
 }
 
-/* Make slotted .box-content fill and scale inside the box. */
-::v-deep .box-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-::v-deep .box-content > * {
+::v-deep .box > * {
   max-width: 100%;
   max-height: 100%;
   display: flex;
@@ -47,7 +37,7 @@
 }
 
 /* Images scale to fit the box while preserving aspect ratio */
-::v-deep .box-content img {
+::v-deep .box img {
   width: auto;
   height: 100%;
   max-height: 320px;
@@ -56,15 +46,15 @@
 }
 
 /* Responsive text sizing for slotted text; parent rules still apply but this ensures scaling */
-::v-deep .box-content .stylized-text,
-::v-deep .box-content .stylized-text {
+::v-deep .box .stylized-text,
+::v-deep .box .stylized-text {
   font-size: 4em;
   line-height: 1;
   text-align: center;
 }
 
 /* Ensure buttons don't overflow on small boxes */
-::v-deep .box-content .btn {
+::v-deep .box .btn {
   transform-origin: center;
   max-width: 90%;
   box-sizing: border-box;

@@ -5,16 +5,16 @@ const props = defineProps({
 
 const emit = defineEmits(['textToggle', 'rainbowToggle'])
 
-const onAlpha = () => emit('textToggle')
-const onSigma = () => emit('rainbowToggle')
+const toggleText = () => emit('textToggle')
+const toggleRainbowColors = () => emit('rainbowToggle')
 </script>
 
 <template>
   <div class="btn-group">
-    <button class="btn" @click="onAlpha" :class="{ 'rainbow-colors': isRainbow }">
+    <button class="btn" @click="toggleText" :class="{ 'rainbow-colors': isRainbow }">
       <span class="btn-text">A</span>
     </button>
-    <button class="btn" @click="onSigma" :class="{ 'rainbow-colors': isRainbow }">
+    <button class="btn" @click="toggleRainbowColors" :class="{ 'rainbow-colors': isRainbow }">
       <span class="btn-text">B</span>
     </button>
   </div>

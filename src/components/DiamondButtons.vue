@@ -40,7 +40,6 @@ const toggleRainbowColors = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
   background-color: #dc143c;
   color: #dcdcdc;
   cursor: pointer;
@@ -62,16 +61,16 @@ const toggleRainbowColors = () => {
   scale: 0.95;
 }
 
-.rainbow-colors {
-  animation: rainbow 3s ease-in-out infinite alternate;
-}
-
 .btn:nth-child(2) {
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 
 .btn:nth-child(2):active {
   box-shadow: inset 0 4px 8px #0006;
+}
+
+.rainbow-colors {
+  animation: rainbow 3s ease-in-out infinite alternate;
 }
 
 @keyframes rainbow {

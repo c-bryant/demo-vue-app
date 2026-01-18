@@ -49,7 +49,7 @@ const onSigma = () => emit('rainbowToggle')
 }
 
 .btn:active {
-  box-shadow: inset 0 4px 8px #0006;
+  box-shadow: inset 0 -4px 8px #0006;
   scale: 0.95;
 }
 
@@ -59,6 +59,10 @@ const onSigma = () => emit('rainbowToggle')
 
 .btn:nth-child(2) {
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.btn:nth-child(2):active {
+  box-shadow: inset 0 4px 8px #0006;
 }
 
 .btn-text {

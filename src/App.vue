@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
     <Box class="quadrant bl">
       <img
         :class="['crest-image', { spinning: isSpinning }]"
-        src="../public/assets/mcgregor_crest_coat_of_arms.png"
+        src="../assets/mcgregor_crest_coat_of_arms.png"
         alt="mcgreggor crest coat of arms"
         @animationend="onSpinEnd"
       />
